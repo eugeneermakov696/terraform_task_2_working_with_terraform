@@ -13,12 +13,12 @@ variable "storage_account_name" {
   default = "examplestorageacc696"
 }
 
-variable "storage_container_name" {
+variable "container_name" {
   type    = string
   default = "example-container"
 }
 
-variable "storage_blob_name" {
+variable "blob_name" {
   type    = string
   default = "my-blob.txt"
 }

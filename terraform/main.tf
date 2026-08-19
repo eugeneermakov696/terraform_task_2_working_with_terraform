@@ -21,7 +21,7 @@ resource "azurerm_storage_account" "example" {
 }
 
 resource "azurerm_storage_container" "example" {
-  name                  = var.storage_container_name
+  name                  = var.container_name
   storage_account_name  = azurerm_storage_account.example.name
   container_access_type = "private"
 }
@@ -29,7 +29,7 @@ resource "azurerm_storage_container" "example" {
 resource "azurerm_storage_blob" "example" {
   storage_container_name = azurerm_storage_container.example.name
   storage_account_name   = azurerm_storage_account.example.name
-  name                   = var.storage_blob_name
+  name                   = var.blob_name
   type                   = "Block"
   source                 = "terraform.tar.gz"
 }
